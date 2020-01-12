@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -12,6 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.olair.calculator.MainActivity;
 import com.olair.calculator.R;
+import com.olair.calculator.data.Element;
+import com.olair.calculator.data.source.ElementsDataSource;
+import com.olair.calculator.data.source.local.ElementsLocalDataSource;
+
+import java.util.List;
 
 /**
  * Create by oLair on 2020/1/11.
@@ -27,9 +33,6 @@ public class PanelFragment extends Fragment {
 
     private RecyclerView recyElementView;
 
-    public PanelFragment() {
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,25 +41,28 @@ public class PanelFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        final List<Element> elements = new ElementsLocalDataSource().getElements();
+
         View view = inflater.inflate(R.layout.fragment_panel, container, false);
         recyElementView = view.findViewById(R.id.act_main_recy);
         recyElementView.setLayoutManager(new GridLayoutManager(getContext(), 4));
-        recyElementView.setAdapter(new RecyclerView.Adapter() {
+        recyElementView.setAdapter(new RecyclerView.Adapter<ViewHolder>() {
             @NonNull
             @Override
-            public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
                 return new ViewHolder(inflater.inflate(R.layout.item_element_act_main, parent, false));
             }
 
             @Override
-            public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
+            public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+                holder.tvMain.setText(elements.get(position).getMainElement());
             }
 
             @Override
             public int getItemCount() {
-                return 20;
+                return elements.size();
             }
         });
         return view;
@@ -65,8 +71,11 @@ public class PanelFragment extends Fragment {
 
     private class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ViewHolder(@NonNull View itemView) {
+        private TextView tvMain;
+
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
+            tvMain = itemView.findViewById(R.id.element_main);
         }
     }
 

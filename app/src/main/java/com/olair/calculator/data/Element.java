@@ -9,7 +9,7 @@ public class Element {
     /**
      * 主要元素
      */
-    private char mainElement;
+    private String mainElement;
 
     /**
      * 主要元素描述
@@ -19,7 +19,7 @@ public class Element {
     /**
      * 次要元素
      */
-    private char minorElement;
+    private String minorElement;
 
     /**
      * 次要标志的描述信息
@@ -31,5 +31,31 @@ public class Element {
      */
     private boolean isOperator;
 
+    public Element(String mainElement, String mainDesc, String minorElement, String minorDesc, boolean isOperator) {
+        this.mainElement = mainElement;
+        this.mainDesc = mainDesc;
+        this.minorElement = minorElement;
+        this.minorDesc = minorDesc;
+        this.isOperator = isOperator;
+    }
 
+    public String getMainElement() {
+        return mainElement;
+    }
+
+    public String getMainDesc() {
+        return mainDesc;
+    }
+
+    public String getMinorElement() {
+        return minorElement;
+    }
+
+    public String getMinorDesc() {
+        return minorDesc;
+    }
+
+    public boolean isOperator() {
+        return isOperator;
+    }
 }
