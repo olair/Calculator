@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".panel.PanelFragment">
 
-
     <LinearLayout
         android:id="@+id/act_main_display_lay"
         android:layout_width="match_parent"
@@ -36,165 +35,118 @@
         app:layout_constraintStart_toStartOf="parent"
         app:rowCount="5">
 
-        <TextView
-            android:gravity="right|bottom"
-            android:text="0"
-            app:layout_columnSpan="4"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="3" />
-
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="AC"
-            android:textColor="#f68904"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="退格"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="/"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="*"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="7"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="8"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="9"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="—"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="4"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="5"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="6"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="+"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="1"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="2"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="3"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
-            android:background="#f68904"
-            android:gravity="center"
-            android:text="="
-            android:textColor="#ffffff"
+            android:background="#ffffff"
             app:layout_columnWeight="1"
             app:layout_rowSpan="2"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="%"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="0"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.olair.calculator.widget.CalculatorButton
             android:layout_margin="1dp"
             android:background="#ffffff"
-            android:gravity="center"
-            android:text="."
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
     </androidx.gridlayout.widget.GridLayout>

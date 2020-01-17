@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "41312525325",
+    "firebase_url": "https://o-calculator.firebaseio.com",
+    "project_id": "o-calculator",
+    "storage_bucket": "o-calculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41312525325:android:78193c051c905e8ae7c944",
+        "android_client_info": {
+          "package_name": "com.olair.calculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41312525325-j5mrvv1mhhem664j3qembg8jvb0pdoil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc_BtM1TOOpMZM-yh1lp-9rMslype41QQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41312525325-j5mrvv1mhhem664j3qembg8jvb0pdoil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
